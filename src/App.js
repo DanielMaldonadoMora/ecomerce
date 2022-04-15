@@ -1,6 +1,6 @@
 import './App.css';
 import {HashRouter,Routes,Route} from 'react-router-dom';
-import {Home,Products,Cart} from './pages';
+import {Home,Product,Cart} from './pages';
 import LoadingScreen from './components/LoadingScreen'
 import { useSelector } from 'react-redux';
 
@@ -18,7 +18,7 @@ function App() {
       {isLoading && <LoadingScreen/>}
        <Routes>
          <Route path="/" element={<Home/>}/>
-         <Route path="/products" element={<Products/>}/>
+         <Route path="/product/:id" element={<Product/>}/>
          <Route path="/cart" element={<Cart/>} />
        </Routes>
      </HashRouter>

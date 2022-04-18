@@ -3,6 +3,7 @@ import {HashRouter,Routes,Route} from 'react-router-dom';
 import {Home,Product,Cart} from './pages';
 import LoadingScreen from './components/LoadingScreen'
 import { useSelector } from 'react-redux';
+import NavBar from './components/NavBar';
 
 
 
@@ -13,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-     
+     <NavBar/>
      <HashRouter>
       {isLoading && <LoadingScreen/>}
        <Routes>
